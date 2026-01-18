@@ -96,18 +96,56 @@ Currently oaas only supports source-to-binary obfuscation. This project enables 
 
 ---
 
-### syshardn: Ideas Coming Soon
+### syshardn: Scheduled Compliance Scans and History
 
 **Repository:** [pointblank-club/syshardn](https://github.com/pointblank-club/syshardn)
 
-syshardn is a multi-platform system hardening tool supporting Linux and Windows. Potential GSoC project areas include:
+**Full proposal:** [GSOC-2026.md](https://github.com/pointblank-club/syshardn/blob/main/GSOC-2026.md)
 
-- Expanding hardening rule coverage
-- Adding macOS support
-- Building a configuration management interface
-- Compliance reporting (CIS benchmarks, STIG)
+#### Summary
 
-Interested contributors should explore the repository and open a discussion to propose specific project ideas.
+Extend syshardn with scheduled scan execution, persistent scan history storage, and artifact export. Integrate with OS schedulers (cron, systemd timers, Task Scheduler).
+
+#### Details
+
+| Attribute | Value |
+|-----------|-------|
+| Skill level | Intermediate |
+| Language | Python |
+| Expected size | Medium (~175 hours) |
+| Mentors | TBD |
+
+#### Relevant Links
+
+- [systemd timers](https://www.freedesktop.org/software/systemd/man/systemd.timer.html)
+- [cron](https://man7.org/linux/man-pages/man5/crontab.5.html)
+- [Windows Task Scheduler](https://learn.microsoft.com/en-us/windows/win32/taskschd/task-scheduler-start-page)
+
+---
+
+### syshardn: macOS Platform Support
+
+**Repository:** [pointblank-club/syshardn](https://github.com/pointblank-club/syshardn)
+
+**Full proposal:** [GSOC-2026.md](https://github.com/pointblank-club/syshardn/blob/main/GSOC-2026.md)
+
+#### Summary
+
+Add macOS support with platform detection, macOS executor (check/apply/rollback), and a focused macOS rule pack covering password policy, screen lock, firewall, and FileVault.
+
+#### Details
+
+| Attribute | Value |
+|-----------|-------|
+| Skill level | Intermediate |
+| Language | Python |
+| Expected size | Small (~90 hours) |
+| Prerequisites | Access to macOS; familiarity with macOS security tools |
+| Mentors | TBD |
+
+#### Relevant Links
+
+- [CIS Benchmarks for macOS](https://www.cisecurity.org/benchmark/apple_os)
 
 ---
 
