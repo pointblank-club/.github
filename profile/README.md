@@ -47,7 +47,7 @@ Whether you're interested in security research, building compilers, creating dev
 
 - **New to Open Source?** Check out our [good first issues](https://github.com/search?q=org%3Apointblank-club+label%3A%22good+first+issue%22&type=issues)
 - **Want to Contribute?** Read our [Contributing Guidelines](https://github.com/pointblank-club/.github/blob/main/CONTRIBUTING.md)
-- **Interested in GSoC?** Visit our [GSoC 2026 Ideas](https://github.com/pointblank-club/gsoc-2026)
+- **Interested in GSoC?** Visit our [GSoC 2026 Ideas](https://github.com/pointblank-club/.github/blob/main/GSOC-2026-IDEAS.md)
 
 ## 📊 GitHub Stats
 
