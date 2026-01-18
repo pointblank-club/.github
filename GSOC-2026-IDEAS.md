@@ -48,9 +48,11 @@ This project focuses on evolving kettle from a minimal runtime engine into a usa
 
 ---
 
-### vestigo: Ideas Coming Soon
+### vestigo: Automated Peripheral Modeling
 
 **Repository:** [pointblank-club/vestigo](https://github.com/pointblank-club/vestigo)
+
+**Full proposal:** [GSOC-2026.md](https://github.com/pointblank-club/vestigo/blob/main/GSOC-2026.md)
 
 Vestigo is a firmware analysis and crypto-detection pipeline built with Python. Potential GSoC project areas include:
 
@@ -135,9 +137,11 @@ IRis currently relies on static scalar metrics (e.g., instruction counts, loop d
 
 ---
 
-### edgeFlow: Ideas Coming Soon
+### edgeFlow: Implement Advanced IR Optimization Passes
 
 **Repository:** [pointblank-club/edgeFlow](https://github.com/pointblank-club/edgeFlow)
+
+**Full proposal:** [GSOC-2026.md](https://github.com/pointblank-club/edgeFlow/blob/main/GSOC-2026.md)
 
 edgeFlow is a DSL for optimizing ML models on edge devices. Potential GSoC project areas include:
 
