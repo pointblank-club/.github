@@ -63,18 +63,34 @@ Interested contributors should explore the repository and open a discussion to p
 
 ---
 
-### oaas: Ideas Coming Soon
+### oaas: Windows PE Binary-to-Binary Obfuscation Pipeline
 
 **Repository:** [pointblank-club/oaas](https://github.com/pointblank-club/oaas)
 
-oaas (Obfuscation As A Service) is an LLVM-based binary obfuscation toolchain. Potential GSoC project areas include:
+**Full proposal:** [GSOC-2026.md](https://github.com/pointblank-club/oaas/blob/main/GSOC-2026.md)
 
-- New MLIR obfuscation passes
-- Improved Windows PE binary support
-- Enhanced reporting and metrics visualization
-- Integration with additional compiler frontends
+#### Summary
 
-Interested contributors should explore the repository and open a discussion to propose specific project ideas.
+Implement a working binary-to-binary obfuscation pipeline for Windows PE executables. The pipeline will lift binaries to LLVM IR, apply obfuscation passes, and recompile to an obfuscated PE binary.
+
+#### Description
+
+Currently oaas only supports source-to-binary obfuscation. This project enables obfuscating existing binaries where source code is unavailable - useful for legacy software protection, third-party library hardening, and security research. The pipeline uses Ghidra for CFG extraction, McSema/RetDec for lifting to LLVM IR, applies OLLVM passes, and recompiles back to a working PE.
+
+#### Details
+
+| Attribute | Value |
+|-----------|-------|
+| Skill level | Intermediate |
+| Languages | Python, C++, Bash |
+| Expected size | Medium (~175 hours) |
+| Mentors | TBD |
+
+#### Relevant Links
+
+- [McSema](https://github.com/lifting-bits/mcsema)
+- [RetDec](https://github.com/avast/retdec)
+- [Ghidra](https://ghidra-sre.org/)
 
 ---
 
@@ -136,6 +152,7 @@ Interested contributors should explore the repository and open a discussion to p
 ### Mentor Contact
 
 For questions about specific projects, reach out via:
+- Email: admin@pointblank.club
 - GitHub Issues in the relevant repository
 - GitHub Discussions (where available)
 - Direct mentor contact (listed in project details)
