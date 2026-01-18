@@ -39,7 +39,7 @@ This project focuses on evolving kettle from a minimal runtime engine into a usa
 | Skill level | Intermediate |
 | Language | Go |
 | Expected size | Medium |
-| Mentors | Rahul K (rahul.u.india[at]gmail[.]com) |
+| Mentors | Rahul K ([@rahulk789](https://github.com/rahulk789), rahul.u.india[at]gmail[.]com) |
 
 #### Relevant Links
 
@@ -56,20 +56,85 @@ This project focuses on evolving kettle from a minimal runtime engine into a usa
 
 #### Summary
 
-Vestigo is a firmware analysis and crypto-detection pipeline built with Python. Potential GSoC project areas include expanding firmware format support, improving ML-based crypto detection accuracy, adding new analysis backends, and building a web-based analysis dashboard.
+Automatically detect and handle missing hardware peripherals (NVRAM, GPIO, Watchdogs) to prevent IoT firmware crashes during dynamic analysis.
 
 #### Description
 
-Interested contributors should explore the repository and open a discussion to propose specific project ideas.
+This project focuses on increasing the "Success Rate" of emulation by building a "Peripheral Stubber" that intercepts invalid memory accesses in Qiling and provides mock data to keep the firmware running.
 
 #### Details
 
 | Attribute | Value |
 |-----------|-------|
-| Skill level | TBD |
-| Language | Python |
-| Expected size | TBD |
-| Mentors | TBD |
+| Skill level | Intermediate |
+| Languages | Python, Assembly (ARM/MIPS) |
+| Expected size | Large (350 hours) |
+| Mentors | Kamini Banait ([@kamini08](https://github.com/kamini08), kaminibanait03[at]gmail[.]com) |
+
+#### Relevant Links
+
+- [Qiling Documentation](https://docs.qiling.io/en/latest/)
+- [Unicorn Engine](https://unicorn-engine.org/)
+
+---
+
+### vestigo: Cross-Modal Dynamic Instrumentation (Static-to-Dynamic Bridge)
+
+**Repository:** [pointblank-club/vestigo](https://github.com/pointblank-club/vestigo)
+
+**Full proposal:** [GSOC-2026.md](https://github.com/pointblank-club/vestigo/blob/main/GSOC-2026.md)
+
+#### Summary
+
+Translate Static Analysis findings from Ghidra into Dynamic Instrumentation scripts for Frida/Qiling to automatically verify cryptographic functions.
+
+#### Description
+
+This project focuses on closing the loop between "Guessing" and "Proving" by writing a generator that takes Ghidra's predicted function addresses (e.g., "Potential AES at 0x4000") and auto-generates Frida hooks to intercept those specific addresses. It also includes developing a Real-Time Entropy Monitor that scans memory buffers during execution to distinguish between high-entropy ciphertext and low-entropy keys/plaintext.
+
+#### Details
+
+| Attribute | Value |
+|-----------|-------|
+| Skill level | Intermediate |
+| Languages | Python, JavaScript (Frida), Java (Ghidra) |
+| Expected size | Medium (175 hours) |
+| Mentors | Kamini Banait ([@kamini08](https://github.com/kamini08), kaminibanait03[at]gmail[.]com) |
+
+#### Relevant Links
+
+- [Frida Documentation](https://frida.re/docs/home/)
+- [Ghidra](https://ghidra-sre.org/)
+
+---
+
+### vestigo: Differential Trace Analysis & Taint Tracking
+
+**Repository:** [pointblank-club/vestigo](https://github.com/pointblank-club/vestigo)
+
+**Full proposal:** [GSOC-2026.md](https://github.com/pointblank-club/vestigo/blob/main/GSOC-2026.md)
+
+#### Summary
+
+Compare execution traces of the same binary under different inputs to isolate cryptographic processing logic without needing symbol names.
+
+#### Description
+
+This project focuses on "Behavioral Identification" by building a tracer on top of Qiling that records memory access patterns and instruction sequences. By running the binary twice with slightly different inputs (e.g., changing 1 bit), implement algorithms to detect the "Avalanche Effect" in the execution trace, effectively pinpointing the exact basic blocks responsible for encryption/hashing.
+
+#### Details
+
+| Attribute | Value |
+|-----------|-------|
+| Skill level | Intermediate |
+| Languages | Python, C++ |
+| Expected size | Large (350 hours) |
+| Mentors | Kamini Banait ([@kamini08](https://github.com/kamini08), kaminibanait03[at]gmail[.]com) |
+
+#### Relevant Links
+
+- [Avalanche Effect](https://en.wikipedia.org/wiki/Avalanche_effect)
+- [Qiling Taint Analysis Wiki](https://github.com/qilingframework/qiling/wiki/Taint-Analysis)
 
 ---
 
@@ -94,7 +159,7 @@ Currently oaas only supports source-to-binary obfuscation. This project enables 
 | Skill level | Intermediate |
 | Languages | Python, C++, Bash |
 | Expected size | Medium (~175 hours) |
-| Mentors | TBD |
+| Mentors | Akash Singh ([@SkySingh04](https://github.com/SkySingh04), akashsingh2210670[at]gmail[.]com) |
 
 #### Relevant Links
 
@@ -121,7 +186,7 @@ Extend syshardn with scheduled scan execution, persistent scan history storage, 
 | Skill level | Intermediate |
 | Language | Python |
 | Expected size | Medium (~175 hours) |
-| Mentors | TBD |
+| Mentors | R Aswin ([@Aswinr24](https://github.com/Aswinr24), aswinr242004[at]gmail[.]com) |
 
 #### Relevant Links
 
@@ -149,7 +214,7 @@ Add macOS support with platform detection, macOS executor (check/apply/rollback)
 | Language | Python |
 | Expected size | Small (~90 hours) |
 | Prerequisites | Access to macOS; familiarity with macOS security tools |
-| Mentors | TBD |
+| Mentors | R Aswin ([@Aswinr24](https://github.com/Aswinr24), aswinr242004[at]gmail[.]com) |
 
 #### Relevant Links
 
@@ -178,7 +243,67 @@ IRis currently relies on static scalar metrics (e.g., instruction counts, loop d
 | Skill level | Intermediate |
 | Languages | Python, PyTorch (Deep Learning), Graph Neural Networks (PyTorch Geometric/DGL), Compiler Theory (LLVM IR structure) |
 | Expected size | 350 hours |
-| Mentors | Shubhang, Inchara, Yash |
+| Mentors | Shubhang ([@Zrahay](https://github.com/Zrahay), shubhangsinha44[at]gmail[.]com), Inchara ([@Incharajayaram](https://github.com/Incharajayaram), incharajayaram2020[at]gmail[.]com), Yash ([@YashSuthar983](https://github.com/YashSuthar983), yashsuthar983[at]gmail[.]com) |
+
+---
+
+### edgeFlow: Add RISC-V and WebAssembly Backend Support
+
+**Repository:** [pointblank-club/edgeFlow](https://github.com/pointblank-club/edgeFlow)
+
+**Full proposal:** [GSOC-2026.md](https://github.com/pointblank-club/edgeFlow/blob/main/GSOC-2026.md)
+
+#### Summary
+
+Expand the compiler's code generation capabilities to support open hardware and web-based environments.
+
+#### Description
+
+This project focuses on writing new backend modules for the EdgeFlow compiler by translating the Intermediate Representation (IR) into compatible C++ code for RISC-V embedded targets and WebAssembly (WASM) modules, enabling browser-based inference and simulation.
+
+#### Details
+
+| Attribute | Value |
+|-----------|-------|
+| Skill level | Intermediate |
+| Language | C++ |
+| Expected size | Medium (175 hours) |
+| Mentors | Kamini Banait ([@kamini08](https://github.com/kamini08), kaminibanait03[at]gmail[.]com) |
+
+#### Relevant Links
+
+- [RISC-V Technical Specifications](https://riscv.org/technical/specifications/)
+- [WebAssembly C and C++](https://webassembly.org/docs/c-and-c++/)
+
+---
+
+### edgeFlow: Implement Language Server Protocol (LSP) Support
+
+**Repository:** [pointblank-club/edgeFlow](https://github.com/pointblank-club/edgeFlow)
+
+**Full proposal:** [GSOC-2026.md](https://github.com/pointblank-club/edgeFlow/blob/main/GSOC-2026.md)
+
+#### Summary
+
+Develop a dedicated Language Server to provide a modern developer experience for the EdgeFlow DSL.
+
+#### Description
+
+This project focuses on building developer tooling to reduce configuration errors by implementing the LSP specification to provide real-time syntax highlighting, code completion, and semantic diagnostics (e.g., detecting hardware mismatches), packaged within a VS Code extension.
+
+#### Details
+
+| Attribute | Value |
+|-----------|-------|
+| Skill level | Intermediate |
+| Languages | TypeScript, Python/C++ |
+| Expected size | Medium (175 hours) |
+| Mentors | Kamini Banait ([@kamini08](https://github.com/kamini08), kaminibanait03[at]gmail[.]com) |
+
+#### Relevant Links
+
+- [Language Server Protocol](https://microsoft.github.io/language-server-protocol/)
+- [VS Code Language Server Extension Guide](https://code.visualstudio.com/api/language-extensions/language-server-extension-guide)
 
 ---
 
@@ -190,20 +315,25 @@ IRis currently relies on static scalar metrics (e.g., instruction counts, loop d
 
 #### Summary
 
-edgeFlow is a DSL for optimizing ML models on edge devices. Potential GSoC project areas include expanding hardware backend support, new optimization passes for edge deployment, quantization and pruning improvements, and integration with popular ML frameworks.
+Harden the compiler by implementing standard optimization algorithms within the Intermediate Representation (IR).
 
 #### Description
 
-Interested contributors should explore the repository and open a discussion to propose specific project ideas.
+This project focuses on improving the efficiency of the generated binary code by implementing graph-based algorithms for Dead Code Elimination (DCE), Common Subexpression Elimination (CSE), and Constant Folding to minimize model size and execution overhead.
 
 #### Details
 
 | Attribute | Value |
 |-----------|-------|
-| Skill level | TBD |
-| Language | TBD |
-| Expected size | TBD |
-| Mentors | TBD |
+| Skill level | Intermediate |
+| Language | C++ |
+| Expected size | Large (350 hours) |
+| Mentors | Madhur Kumar ([@MadhurKumar004](https://github.com/MadhurKumar004), madhurkumar004[at]gmail[.]com) |
+
+#### Relevant Links
+
+- [LLVM Optimization Passes](https://llvm.org/docs/Passes.html)
+- [Control-flow Graph](https://en.wikipedia.org/wiki/Control-flow_graph)
 
 ---
 
@@ -220,7 +350,8 @@ Interested contributors should explore the repository and open a discussion to p
 ### Mentor Contact
 
 For questions about specific projects, reach out via:
-- Email: admin@pointblank.club
+
+- Email: <admin@pointblank.club>
 - GitHub Issues in the relevant repository
 - GitHub Discussions (where available)
 - Direct mentor contact (listed in project details)
