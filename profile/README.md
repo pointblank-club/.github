@@ -28,7 +28,7 @@ Building practical open source alternatives through collaborative innovation. Sp
 
 ## 🚀 What We Do
 
-We're a tech collective building open source alternatives and developer tools, with a focus on security, compilers, and dev tooling. Our projects range from competitive programming trackers to campus management systems—all built collaboratively, all production-ready.
+We're a tech collective building open source alternatives and developer tools, with a focus on security, compilers, and dev tooling. Our projects range from container runtimes to firmware analysis tools—all built collaboratively, all production-ready.
 
 **Core Domains:** Security • Compilers • Developer Tooling • Competitive Programming • Web & Mobile Development • ML/AI • DevOps
 
