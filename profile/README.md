@@ -12,7 +12,7 @@ Building practical open source alternatives through collaborative innovation. Sp
   &nbsp;
   <a href="https://www.linkedin.com/company/pointblank-club/" target="_blank"><img src="https://img.shields.io/badge/LinkedIn-0A66C2.svg?style=for-the-badge&logo=LinkedIn&logoColor=white"></a>
   &nbsp;
-  <a href="https://pointblank.club/blog" target="_blank"><img src="https://img.shields.io/badge/Blog-0A0A0A.svg?style=for-the-badge&logo=rss&logoColor=white"></a>
+  <a href="https://blog.pointblank.club" target="_blank"><img src="https://img.shields.io/badge/Blog-0A0A0A.svg?style=for-the-badge&logo=rss&logoColor=white"></a>
   &nbsp;
   <a href="https://discord.gg/hw4Muqjbbu" target="_blank"><img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white"></a>
   &nbsp;
