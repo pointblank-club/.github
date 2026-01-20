@@ -38,8 +38,6 @@ jobs:
           token: ${{ secrets.TOKEN }}
           base: repositories
           base_json: scripts/stats.json
-          config_display: large
-          config_padding: 10%
           plugin_followup: yes
           plugin_followup_archived: no
           user: pointblank-club
