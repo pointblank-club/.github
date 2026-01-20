@@ -19,11 +19,10 @@ jobs:
           python3 -m pip install requests
 
       - name: Generate stats.json
-        working-directory: .github/scripts
         env:
           TOKEN: ${{ secrets.TOKEN }}
         run: |
-          python3 generate_stats_svg.py
+          python3 .github/scripts/generate_stats_svg.py
 
       - name: Generate SVG from stats.json
         uses: lowlighter/metrics@latest
@@ -38,7 +37,7 @@ jobs:
           #  - repo      (optional, if you want to include private repositories)
           token: ${{ secrets.TOKEN }}
           base: json
-          file: ./github/scripts/stats.json
+          file: .github/scripts/stats.json
           plugin_followup: yes
           plugin_followup_archived: no
           user: pointblank-club
